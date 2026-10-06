@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train With Prime | Build a body that lasts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <a href="#top" class="logo">Train With Prime</a>
+    <nav class="nav" id="nav">
+      <a href="#approach">Approach</a>
+      <a href="#myths">Myths</a>
+      <a href="#offers">Coaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">Menu</button>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-text reveal">
+        <p class="kicker">Strength · Movement · Running · Performance</p>
+        <h1>Build a body <em>that lasts.</em></h1>
+        <p class="lead">We help everyday people become stronger, fitter and more capable, so they can keep doing the things they love for longer.</p>
+        <a href="#contact" class="btn">Book a free call</a>
+      </div>
+      <!-- Coach photo: to change it, replace images/coach.jpg -->
+      <figure class="hero-image reveal">
+        <img src="images/coach.jpg" alt="Train With Prime coach standing in the gym with kettlebells and dumbbells" width="502" height="790">
+        <figcaption>Your coach · Train With Prime</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== WHO IT'S FOR ===== -->
+    <section class="section intro reveal">
+      <blockquote>"I'm not trying to become an athlete. I just want to feel like one."</blockquote>
+      <p>Coaching for 30 to 50 year olds who used to be active, now work a lot, sit too much and want to lift, run and move properly again, without being treated like they're broken.</p>
+    </section>
+
+    <!-- ===== APPROACH: ACCORDION ===== -->
+    <section class="section" id="approach">
+      <h2 class="reveal">The approach</h2>
+      <div class="accordion">
+        <div class="acc-item reveal">
+          <button class="acc-head"><span>01</span> Move well <i>+</i></button>
+          <div class="acc-body"><p>Mobility, coordination, stability and balance. Can you actually control your body through useful ranges of motion? That's the question we answer.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head"><span>02</span> Get strong <i>+</i></button>
+          <div class="acc-body"><p>Progressive resistance training built on squat, hinge, push, pull, carry, rotate and brace. Longevity without strength is a hollow idea.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head"><span>03</span> Build engine <i>+</i></button>
+          <div class="acc-body"><p>Running, intervals and conditioning. You don't need to run marathons, just a heart and lungs that let you do more.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head"><span>04</span> Stay capable <i>+</i></button>
+          <div class="acc-body"><p>Climb mountains. Play football. Keep up with your kids. Get off the floor easily. We train for what you want to still be doing in 20 years.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MYTHS: FLIP CARDS ===== -->
+    <section class="section section-tint" id="myths">
+      <h2 class="reveal">Things we hear a lot</h2>
+      <p class="hint reveal">Tap a card to see the truth.</p>
+      <div class="cards">
+        <button class="card reveal">
+          <span class="card-front">"I just need to stretch more."</span>
+          <span class="card-back">Your hips don't need more stretching. They need to be strong through a useful range.</span>
+        </button>
+        <button class="card reveal">
+          <span class="card-front">"Running is bad for your knees."</span>
+          <span class="card-back">Running isn't the problem. Going from zero to 30km a week probably is.</span>
+        </button>
+        <button class="card reveal">
+          <span class="card-front">"Strength is for bodybuilders."</span>
+          <span class="card-back">You train strength so everyday life stays easy.</span>
+        </button>
+        <button class="card reveal">
+          <span class="card-front">"It's just getting older."</span>
+          <span class="card-back">Ageing is inevitable. Getting weaker and stiffer is not something you have to accept.</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== OFFERS ===== -->
+    <section class="section" id="offers">
+      <h2 class="reveal">Ways to work together</h2>
+      <div class="offer-list">
+        <article class="offer reveal">
+          <h3>Prime Performance</h3>
+          <p>1-to-1 coaching: strength, movement, conditioning, running, mobility, nutrition education and regular assessments.</p>
+          <a href="#contact">Enquire →</a>
+        </article>
+        <article class="offer reveal">
+          <h3>Prime Hybrid</h3>
+          <p>For people who specifically want strength and running, built to work together rather than against each other.</p>
+          <a href="#contact">Enquire →</a>
+        </article>
+        <article class="offer reveal muted">
+          <h3>Prime Longevity</h3>
+          <p>Online coaching to train independently with the Prime system. Coming soon.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="reveal">
+        <h2>Let's talk</h2>
+        <p>Tell us a bit about where you are now. We'll reply within a day.</p>
+      </div>
+      <form class="form reveal" id="contactForm" novalidate>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="4" placeholder="What would you love to still be doing in 20 years?"></textarea>
+        <button type="submit" class="btn">Send message</button>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Train With Prime · Move well. Get strong. Stay capable.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
