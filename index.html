@@ -119,7 +119,9 @@
         <h2>Let's talk</h2>
         <p>Tell us a bit about where you are now. We'll reply within a day.</p>
       </div>
-      <form class="form reveal" id="contactForm" novalidate>
+      <form class="form reveal" id="contactForm" action="https://formspree.io/f/xljgblvp" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New enquiry from Train With Prime website">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">  
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Email" required>
         <textarea name="message" rows="4" placeholder="What would you love to still be doing in 20 years?"></textarea>

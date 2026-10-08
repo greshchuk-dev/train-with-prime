@@ -62,15 +62,17 @@ document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', () => card.classList.toggle('flipped'));
 });
 
-// 5. Contact form validation
+// 5. Contact form: validate, then send to Formspree
 const form = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
+const submitButton = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // stop the page from reloading
+
+  // --- Check the fields ---
   const name = form.elements.name;
   const email = form.elements.email;
-
   const nameOk = name.value.trim() !== '';
   const emailOk = /^\S+@\S+\.\S+$/.test(email.value);
 
@@ -82,7 +84,28 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
-  // TODO: connect to a form service or backend
-  formMessage.textContent = `Thanks ${name.value.trim()}, we'll be in touch soon.`;
-  form.reset();
+  // --- Send it ---
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+  formMessage.textContent = '';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (response.ok) {
+      formMessage.textContent = `Thanks ${name.value.trim()}, we'll be in touch soon.`;
+      form.reset();
+    } else {
+      formMessage.textContent = 'Something went wrong. Please try again.';
+    }
+  } catch (error) {
+    formMessage.textContent = 'No connection. Please check your internet and try again.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send message';
+  }
 });
